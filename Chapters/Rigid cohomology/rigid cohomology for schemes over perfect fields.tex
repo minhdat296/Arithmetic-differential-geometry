@@ -1,0 +1,96 @@
+\section{Rigid cohomology for schemes over perfect fields}
+    \begin{convention} \label{conv: rigid_cohomology_non_archimedean_ground_field}
+        Henceforth, we fix a \textit{complete} non-archimedean field $(K, |-|)$ with valuation ring $K^{\circ} := \{x \in K \mid |x| \leq 1\}$ and residue field $k := K^{\circ}/\m_K$, where $\m_K := \{x \in K \mid |x| < 1\}$ is the unique maximal ideal of $K^{\circ}$. In addition, we will be caring about the value group of $K$ (or rather, of $K^{\circ}$), which comes from the valuation $v: K^{\x} \to \R$ that determines the non-archimedean ultra-metric $|-| := \exp(v(-))$, and is given by $|K^{\x}| := \im v$ (note that this is well-defined because $v: K^{\x} \to \R$ is a group homomorphism); this is a totally ordered abelian group whose ordering is inherited from the archimedean ordering of $(\R, \leq)$.
+    \end{convention}
+    \begin{convention}[Berkovich-Gelfand spectra of non-archimedean Banach rings]
+        For any non-archimedean (commutative) Banach ring $(A, \rho_0)$, we shall write $\Spv(A, \rho_0$ for its Berkovich-Gelfand spectra, i.e. the set of multiplicative semi-norms $\rho: A \to \R_{\geq 0}$ which are bounded-above by $\rho_0$ (that is, for all $f \in A$ and all $\rho \in \Spv(A, \rho_0)$, we have $\rho(f) \leq C \rho_0(f)$ for some $C \geq 0$).
+    \end{convention}
+
+    \subsection{Overconvergent sites}
+        \subsubsection{Overconvergent schemes}
+            \begin{definition}[Overconvergent schemes] \label{def: pre_overconvergent_schemes}
+                A \textbf{pre-overconvergent $(k, K^{\circ}, K)$-scheme} (or perhaps simply a pre-overconvergent over $K^{\circ}$) is a diagram of adic spaces over $\Spa \Z$:
+                    $$
+                        \begin{tikzcd}
+                        	& V \\
+                        	& {\frakP_{\eta}} \\
+                        	X & {\frakP}
+                        	\arrow["\iota", hook, from=3-1, to=3-2]
+                        	\arrow["\lambda", from=1-2, to=2-2]
+                        	\arrow[from=2-2, to=3-2]
+                        \end{tikzcd}
+                    $$
+                wherein $\iota: X \hookrightarrow P$ is a Zariski-closed immersion of a locally algebraic $k$-scheme $X$ into a formal scheme $\frakP$ that is topologically of finite type over $\Spf K^{\circ}$, and $\lambda$ is some morphism of Berkovich spaces over $\Spv K$. When there is no risk of confusion, we might only refer to a given pre-overconvergent scheme via a triple $(X, \frakP, V)$. 
+                
+                Morphisms of pre-overconvergent $(k, K^{\circ}, K)$-schemes are the obvious commutative diagrams of adic spaces. With these morphisms, one can construct a natural category of pre-overconvergent $(k, K^{\circ}, K)$-schemes that we shall denote by $\ORig_{/(k, K^{\circ}, K)}$ or simply $\ORig_{/K^{\circ}}$ for brevity.
+            \end{definition}
+            \begin{remark}
+                Observe first of all, that the category $\ORig_{/(k, K^{\circ}, K)}$ as defined in definition \ref{def: pre_overconvergent_schemes} indeed has $(\Spec k, \Spf K^{\circ}, \Spv K)$ as a terminal object, since every pre-overconvergent scheme $(X, \frakP, V)$ is equipped with a unique structural morphism:
+                    $$(X, \frakP, V) \to (\Spec k, \Spf K^{\circ}, \Spv K)$$
+                coming from the structual morphisms $X \to \Spec k$, $\frakP \to \Spf K^{\circ}$, and $V \to \Spv K$, thus justifying our notation. 
+                
+                It is also easy to see that $\ORig_{/(k, K^{\circ}, K)}$ has all finite pullbacks (and hence all finite products by elementary category theory) as the categories of locally algebraic $k$-schemes, formal $K^{\circ}$-schemes that are topologically of finite type, and Berkovich spaces over $K$, all have finite pullbacks.
+            \end{remark}
+            \begin{proposition}[The overconvergent topology] \label{prop: the_overconvergent_topology}
+                Fix an pre-overconvergent $(k, K^{\circ}, K)$-scheme $(X, \frakP, V) \in \Ob(\ORig_{/(k, K^{\circ}, K)})$ and define a covering thereof as a family $\{(\id_X, \id_P, f_i): (X, \frakP, V_i) \to (X, \frakP, V)\}_{i \in I}$ such that $\{f_i: V_i \hookrightarrow V\}_{i \in I}$ is an analytic open covering over $\Spv K$ of the Berkovich space $V$ (i.e. $V \cong \bigcup_{i \in I} V_i$). The collection of all such coverings defines a \textit{subcanonical} topology on $\ORig_{/(k, K^{\circ}, K)}$, which we shall refer to as the \textbf{overconvergent topology}.
+            \end{proposition}
+                \begin{proof}
+                    
+                \end{proof}
+            \begin{corollary}
+                For every presheaf $F \in \Ob(\Psh(\ORig_{/(k, K^{\circ}, K)}))$, there is a fibration in categories:
+                    $$\ORig_{/F} \to \ORig_{/(k, K^{\circ}, K)}$$
+                satisfying overconvergent descent, where $\ORig_{/F}$ is the full subcategory of $\Psh(\ORig_{/(k, K^{\circ}, K)})_{/F}$ spanned by the representable presheaves mapping into $F$.
+            \end{corollary}
+            \begin{definition}[Tubes] \label{def: berthelot_tubes}
+                Let $(X, \frakP, V)$ be a pre-overconvergent $(k, K^{\circ}, K)$-scheme. The \textbf{tube} of $X$ inside $V$ with respect to $\lambda: V \to P$ (as in definition \ref{def: pre_overconvergent_schemes}), denoted by $]X[_{V, \lambda}$ (or simply $]X[_V$ when $\lambda$ is understood from the surrounding context) is then given by:
+                    $$
+                        \begin{tikzcd}
+                        	{]X[_{V, \lambda}} & V \\
+                        	{]X[_{\frakP_{\eta}}} & {\frakP_{\eta}} \\
+                        	X & P
+                        	\arrow["\iota", hook, from=3-1, to=3-2]
+                        	\arrow["\lambda", from=1-2, to=2-2]
+                        	\arrow[from=2-2, to=3-2]
+                        	\arrow[from=1-1, to=2-1]
+                        	\arrow[from=2-1, to=3-1]
+                        	\arrow[from=1-1, to=1-2]
+                        	\arrow[from=2-1, to=2-2]
+                        	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=2-1, to=3-2]
+                        	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+                        \end{tikzcd}
+                    $$
+            \end{definition}
+            \begin{remark}
+                The terminology supposedly came from the consideration of the case wherein $X$ is a curve. Then, one could imagine $P$ as a $p$-adic formal deformation of $X$, thus existing as a \say{fuzzy tube} around $X$. 
+            \end{remark}
+            \begin{convention}
+                Of course, the formation of tubes of pre-overconvergent $(k, K^{\circ}, K)$-schemes is functorial, being given by pullbacks: any morphism $(f, \pi, v): (X', \frakP', V') \to (X, \frakP, V)$ of pre-overconvergent $(k, K^{\circ}, K)$-schemes gives rise to a corresponding morphism of tubes, which we shall denote by $]f[_v: ]X'[_{V'} \to ]X[_V$.
+            \end{convention}
+            \begin{definition}[Strict neighbourhoods] \label{def: strict_neighbourhoods_of_pre_overconvergent_schemes}
+                A \textbf{strict neighbourhood} of a pre-overconvergent $(k, K^{\circ}, K)$-scheme $(X, \frakP, V)$ is a morphism $(f, \pi, v): (X', \frakP', V') \to (X, \frakP, V)$ such that $f, \pi$ are isomorphisms, that $]f[_v: ]X'[_{V'} \to ]X[_V$ is also an isomorphism, and that there exists an open immersion $V' \hookrightarrow ]X[_V$. 
+            \end{definition}
+            \begin{definition}[Overconvergent schemes] \label{def: overconvergent_schemes}
+                 The category of \textbf{overconvergent $(k, K^{\circ}, K)$-schems} is the localisation of $\ORig^{\dagger}_{/(k, K^{\circ}, K)}$ at the class of strict neighbourhoods. Concretely, this means that objects of $\ORig^{\dagger}_{/(k, K^{\circ}, K)}$ are those of $\ORig_{/(k, K^{\circ}, K)}$, whereas its morphisms are diagrams:
+                    $$
+                        \begin{tikzcd}
+                        	{(X', \frakP', W)} & {(X', \frakP', V')} \\
+                        	{(X, \frakP, V)}
+                        	\arrow[from=1-1, to=1-2]
+                        	\arrow[from=1-1, to=2-1]
+                        \end{tikzcd}
+                    $$
+                wherein the horizontal upper arrow is a strict neighbourhood. 
+            \end{definition}
+            \begin{remark}[Overconvergent sites]
+                Of course, $\ORig^{\dagger}_{/(k, K^{\circ}, K)}$ inherits the overconvergent topology (cf. proposition \ref{prop: the_overconvergent_topology}) from $\ORig_{/(k, K^{\circ}, K)}$. The resulting site shall be known as the \textbf{overconvergent site} of $(k, K^{\circ}, K)$, of $\Spf K^{\circ}$, or simply of $K^{\circ}$, or when $(k, K^{\circ}, K) \cong (\F_p, \Z_p, \Q_p)$, we might only say \say{the $p$-adic overconvergent site}.
+            \end{remark}
+            \begin{convention}
+                For each fixed overconvergent $(k, K^{\circ}, K)$-scheme $(X, \frakP, V)$, let us write $\Sh((X, \frakP, V)_{\orig}^{\dagger})$ for the sheaf topos over the overconvergent site $\ORig^{\dagger}_{/(X, \frakP, V)}$, while $\Sh((X, \frakP, V)_{\orig})$ shall mean the sheaf topos on $\ORig_{/(X, \frakP, V)}$.
+            \end{convention}
+        
+        \subsubsection{Cohomology on overconvergent sites of schemes}
+        
+        \subsubsection{Cohomology on overconvergent sites of algebraic stacks}
+        
+    \subsection{Rigid cohomology vs. crystalline cohomology}
