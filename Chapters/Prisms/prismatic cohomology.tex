@@ -82,35 +82,109 @@
                 From proposition \ref{prop: p_derivations_and_lifts_of_frobenii}, one then sees that to $p$-derivations $R \to R$ correspond bijectively to paths in the space $\End_{\F_p\-\Comm\Alg^{\simp^{\op}}}\left(R \tensor_{\Z}^{\L} \F_p\right)$ (here $\F_p\-\Comm\Alg^{\simp^{\op}}$ denotes the $(\infty, 1)$-category of simplicial commutative $\F_p$-algebras) between the points $\phi_{\F_p}$ and $\Frob_{R/p}$.
             \end{remark}
             
-            Let us now move on to examining the (co)limits of $\delta$-rings as well as universal convstructions involving them. In particular, we shall see that the category $(\Z_{(p)}, \del_p)\-\Comm\Alg$ is actually both complete and cocomplete. In fact, that this category is complete and cocomplete is a result of the fact that the evident forgetful functor $(\Z_{(p)}, \del_p)\-\oblv: (\Z_{(p)}, \del_p)\-\Comm\Alg \to \Z_{(p)}\-\Comm\Alg$ even admits both a left-adjoint and right-adjoint, both of which hold arithmetic significance: colimits and limits can then be \say{reflected} back from $\Z_{(p)}\-\Comm\Alg$, which is both complete and cocomplete.
+            Let us now move on to examining the (co)limits of $\delta$-rings as well as universal convstructions involving them. In particular, we shall see that the category $\Z_{(p)}\-\Comm\Alg^{\delta}$ is actually both complete and cocomplete. In fact, that this category is complete and cocomplete is a result of the fact that the evident forgetful functor $\Z_{(p)}\-\oblv^{\delta}: \Z_{(p)}\-\Comm\Alg^{\delta} \to \Z_{(p)}\-\Comm\Alg$ even admits both a left-adjoint and right-adjoint, both of which hold arithmetic significance: colimits and limits can then be \say{reflected} back from $\Z_{(p)}\-\Comm\Alg$, which is both complete and cocomplete.
             \begin{remark}[An initial $\delta$-ring] \label{remark: initial_delta_ring}
-                One can rather easily show that the $\delta$-ring $(\Z_{(p)}, \del_p)$ is initial amongst $\Z_{(p)}$-algebras equipped with $p$-derivations (i.e. $\delta$-rings over $\Z_{(p)}$). As such, for any fixed prime $p$, there is a category $(\Z_{(p)}, \del_p)\-\Comm\Alg$ of what we shall henceforth refer to as $\delta_p$-algebras, whose objects are $\delta$-rings over $\Z_{(p)}$ and and whose morphisms are $\delta_p$-homomorphisms ($\Z_{(p)}$-algebra homomorphisms which are $\delta$-equivariant in the sense of definition \ref{def: delta_rings}). The \say{absolute} category $\Z\-\Comm\Alg^{\delta}$ of all $\delta$-rings, on the other hand, lacks initial objects. 
+                One can rather easily show that the $\delta$-ring $(\Z_{(p)}, \del_p)$ is initial amongst $\Z_{(p)}$-algebras equipped with $p$-derivations (i.e. $\delta$-rings over $\Z_{(p)}$). As such, for any fixed prime $p$, there is a category $\Z_{(p)}\-\Comm\Alg^{\delta}$ of what we shall henceforth refer to as $\delta_p$-algebras, whose objects are $\delta$-rings over $\Z_{(p)}$ and and whose morphisms are $\delta_p$-homomorphisms ($\Z_{(p)}$-algebra homomorphisms which are $\delta$-equivariant in the sense of definition \ref{def: delta_rings}). The \say{absolute} category $\Z\-\Comm\Alg^{\delta}$ of all $\delta$-rings, on the other hand, lacks initial objects. 
             \end{remark}
             \begin{remark}[$\delta$-structures and length-$2$ Witt vectors] \label{remark: p_derivations_and_length_2_witt_vectors} 
                 
             \end{remark}
             \begin{proposition}[(Co)limits of $\delta$-rings] \label{prop: (co)limits_of_delta_rings}
-                For any fixed prime $p$, the category $(\Z_{(p)}, \del_p)\-\Comm\Alg$ of $\delta_p$-algebras admits all colimit and limits, which are computed at the level of the underlying commutative $\Z_{(p)}$-algebras. 
+                For any fixed prime $p$, the category $\Z_{(p)}\-\Comm\Alg^{\delta}$ of $\delta_p$-algebras admits all colimit and limits, which are computed at the level of the underlying commutative $\Z_{(p)}$-algebras. 
             \end{proposition}
                 \begin{proof}
-                    Thanks to the Special Adjoint Functor Theorem (cf. \cite{nlab:adjoint_functor_theorem}), the fact that the forgetful functor $(\Z_{(p)}, \del_p)\-\oblv: (\Z_{(p)}, \del_p)\-\Comm\Alg \to \Z_{(p)}\-\Comm\Alg$ preserves all colimits and all limits that exist in $(\Z_{(p)}, \del_p)\-\Comm\Alg$ implies that it admits both a left-adjoint and a right-adjoint. As the category $\Z_{(p)}\-\Comm\Alg$ is both cocomplete and complete, the (co)limits in $(\Z_{(p)}, \del_p)\-\Comm\Alg$ first of all exist, and second of all can be computed as (co)limits of the underlying diagrams of commutative $\Z_{(p)}$-algebras; as for the $p$-derivations on these (co)limits, they are as constructed in remark \ref{remark: p_derivations_and_length_2_witt_vectors}.
-                \end{proof}                                                                                             
-            \begin{convention}[Free $\delta$-rings]
-                Due to the relative nature of $\delta_p$-algebras (cf. remark \ref{remark: initial_delta_ring}), let us hereonafter refer to the left-adjoint of the forgetful functor:
-                    $$(\Z_{(p)}, \del_p)\-\oblv: (\Z_{(p)}, \del_p)\-\Comm\Alg \to \Z_{(p)}\-\Comm\Alg$$
-                as the functor of \textbf{free $\delta_p$-algebras} and let us denote it by:
-                    $$(\Z_{(p)}, \del_p)\{-\}: \Z_{(p)}\-\Comm\Alg \to (\Z_{(p)}, \del_p)\-\Comm\Alg$$
-            \end{convention}
-            \begin{proposition}
+                    Thanks to the Special Adjoint Functor Theorem (cf. \cite{nlab:adjoint_functor_theorem}), the fact that the forgetful functor $\Z_{(p)}\-\oblv^{\delta}: \Z_{(p)}\-\Comm\Alg^{\delta} \to \Z_{(p)}\-\Comm\Alg$ preserves all colimits and all limits that exist in $\Z_{(p)}\-\Comm\Alg^{\delta}$ implies that it admits both a left-adjoint and a right-adjoint. As the category $\Z_{(p)}\-\Comm\Alg$ is both cocomplete and complete, the (co)limits in $\Z_{(p)}\-\Comm\Alg^{\delta}$ first of all exist, and second of all can be computed as (co)limits of the underlying diagrams of commutative $\Z_{(p)}$-algebras; as for the $p$-derivations on these (co)limits, they are as constructed in remark \ref{remark: p_derivations_and_length_2_witt_vectors}.
+                \end{proof}
+            \begin{corollary}[Quotients and localisations of $\delta$-rings] \label{coro: quotients_and_localisations_of_delta_rings}
                 
+            \end{corollary}    
+            \begin{convention}[Free $\delta$-rings] \label{conv: free_delta_rings}
+                Due to the relative nature of $\delta_p$-algebras (cf. remark \ref{remark: initial_delta_ring}), let us hereonafter refer to the left-adjoint of the forgetful functor $\Z_{(p)}\-\oblv^{\delta}$ as the functor of \textbf{free $\delta_p$-algebras} and let us denote it by $\Z_{(p)}\{-\}^{\delta}$.
+            \end{convention}
+            \begin{proposition}[$\delta$-polynomials] \label{prop: delta_polynomials}
+                
+            \end{proposition}
+                \begin{proof}
+                    
+                \end{proof}
+            \begin{proposition}[Witt vector rings are cofree $\delta$-rings] \label{prop: witt_vector_rings_are_cofree_delta_rings}
+                The right-adjoint of the forgetful functor $\Z_{(p)}\-\oblv^{\delta}$ is the $p$-typical Witt vector functor $\Witt(-)$.
             \end{proposition}
                 \begin{proof}
                     
                 \end{proof}
             
         \subsubsection{Perfect \texorpdfstring{$\delta$}{}-rings}
+            \begin{convention}
+                Henceforth, we shall start writing $\delta$-rings as triples $(R, \delta, \phi)$ where $\phi$ is the (unique) lift of Frobenius attached to the $p$-derivation $\delta$ (cf. proposition \ref{prop: p_derivations_and_lifts_of_frobenii}). 
+            \end{convention}
+            \begin{definition}[Perfect $\delta$-rings] \label{def: perfect_delta_rings}
+                A $p$-torsion-free $\delta$-ring $(R, \delta, \phi)$ is said to be \textbf{perfect} (or alternatively, $(R, \delta, \phi)$ is \textbf{$\delta$-perfect}) if and only if the lift of Frobenius $\phi: R \to R$ is a ring automorphism. 
+            \end{definition}
+            \begin{remark}[(Co)perfection of $\delta$-rings] \label{remark: (co)perfection_of_delta_rings}
+                It is easy to show that - for a fixed prime $p$, the natural embedding of the category of perfect $\delta_p$-algebras into those of all $\delta_p$-algebras admits both a left-adjoint and a right-adjoint, called \textbf{perfection} and \textbf{coperfection}, given respectively by:
+                    $$
+                        A^{\perf} :=
+                        \colim
+                        \left\{
+                            \begin{tikzcd}
+                                R & R & \cdots
+                                \arrow["\phi", from=1-1, to=1-2]
+                                \arrow["\phi", from=1-2, to=1-3]
+                            \end{tikzcd}
+                        \right\}
+                    $$
+                    $$
+                        A^{\coperf} :=
+                        \lim
+                        \left\{
+                            \begin{tikzcd}
+                                \cdots & R & R
+                                \arrow["\phi", from=1-2, to=1-3]
+                                \arrow["\phi", from=1-1, to=1-2]
+                            \end{tikzcd}
+                        \right\}
+                    $$
+            \end{remark}
+            \begin{lemma}[A criterion for $p$-torsion-freeness] \label{lemma: a_criterion_for_p_torsion_freeness}
+                \cite[Lemma 2.28]{bhatt_scholze_prisms} A ring $R$ is $p$-torsion-free if and only if either $R$ is reduced (but not exclusively) or $R$ is perfect (in the sense that $\Frob_R$ is an injective monoid homomorphism).
+            \end{lemma}
+                \begin{proof}
+                    
+                \end{proof}
+            \begin{definition}[$p$-perfect rings] \label{def: p_perfect_rings}
+                A commutative ring $R$ is \textbf{$p$-perfect} (for some prime $p$) if and only if $R/p$ is perfect.
+            \end{definition}
+            \begin{proposition}
+                Fix a prime $p$. There are then the following equivalences of categories:
+                    $$
+                        \begin{tikzcd}
+                        	{\left\{\text{$p$-adically complete $\delta$-perfect $\delta_p$-algebras}\right\}} \\
+                        	& {\F_p\-\Comm\Alg^{\perf}} \\
+                        	{\left\{\text{$p$-adically complete, $p$-torsion-free, and $p$-perfect $\delta_p$-algebras}\right\}}
+                        	\arrow["\Witt"', from=2-2, to=1-1]
+                        	\arrow["{R \mapsto R/p}"', from=3-1, to=2-2]
+                        	\arrow["\oblv"', from=1-1, to=3-1]
+                        \end{tikzcd}
+                    $$
+            \end{proposition}
+                \begin{proof}
+                    
+                \end{proof}
         
-        \subsubsection{Prisms}
+        \subsubsection{Distinguished elements of \texorpdfstring{$\delta$}{}-rings; prisms}
+            \begin{definition}[$p$-local rings] \label{def: p_local_rings}
+                A commutative ring is said to be \textbf{$p$-local} (for some prime $p$) if and only if $p \in \rad(R)$ (that is, every maximal ideal of $R$ contains $p$ as an element, since $\rad(R) := \bigcap_{\m \in \Spm R} \m$).
+            \end{definition}
+            \begin{definition}[Distinguished elements of $\delta$-rings] \label{def: distinguished_elements_of_delta_rings}
+                An element $a \in R$ of a $\delta$-ring $(R, \delta)$ is said to be \textbf{distinguished} if and only if $\delta(a) \in R^{\x}$.
+            \end{definition}
+            \begin{proposition}[Detecting distinguishness using lifts of Frobenii] \label{prop: detecting_distinguishness_using_lifts_of_frobenii}
+                Fix a prime $p$. An element $a \in R$ of a $p$-local $\delta_p$-algebra $(R, \delta, \phi)$ is distinguished if and only if $\phi(a)$ is also distinguished.
+            \end{proposition}
+                \begin{proof}
+                    Suppose first of all that $\phi(a)$ is distinguished. Per proposition \ref{prop: p_derivations_and_lifts_of_frobenii}, we know that this occurs if and only if $a^p + p\delta(a)$ is distinguished, which in turn means that $\delta(a^p + p\delta(a)) \in R^{\x}$.
+                \end{proof}
         
         \subsubsection{Cohomology on prismatic sites}
         
