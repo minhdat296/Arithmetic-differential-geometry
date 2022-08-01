@@ -1,6 +1,34 @@
 \section{Crystalline cohomology}
     \subsection{Divided power algebras}
         \subsubsection{PD-structures}
+            \begin{convention}
+                $0! = 1$, since the symmetry group on $0$ elements (i.e. on the empty set) should have $1$ element: the identity.
+            \end{convention}
+            \begin{definition}[PD-structures] \label{def: PD_structures}
+                A \textbf{PD-ring}\footnote{PD stands for \say{puissance divis\'ee}, meaning \say{divided power}.} is a triple $(A, I, \gamma)$ consisting of:
+                    \begin{enumerate}
+                        \item a commutative ring $I$,
+                        \item an $A$-ideal $I$,
+                        \item a family $\gamma := \{\gamma_n\}_{n \in \N}$ of a function $\gamma_0: I \to I \cup \{1\}$ ang functions $\gamma_n: I \to I$ (where $n > 0$) such that for all $n \geq 0, m \geq 1$, all $x, y \in I$, and all $a \in A$, we have:
+                            \begin{itemize}
+                                \item $\gamma_0(x) = 1$,
+                                \item $\gamma_1(x) = x$,
+                                \item $\gamma_n(x) \gamma_m(x) = \frac{(n + m)!}{n! m!} \gamma_{n + m}(x)$ (note that $\frac{(n + m)!}{n! m!} = \binom{n + m}{n} \in \Z$ and hence makes sense in all rings),
+                                \item $\gamma_n(ax) = a^n \gamma_n(x)$,
+                                \item $\gamma_n(x + y) = \sum_{i = 0}^n \gamma_i(x) \gamma_{n - i}(y)$, 
+                                \item $\gamma_n \circ \gamma_m = \frac{(nm)!}{n! m!^n} \gamma_{nm}$ (note that $\frac{(nm)!}{n! m!^n} \in \Z$, as it is the number of ways to equally divide a group of $nm$ things into $n$ groups of $m$ things each, and hence makes sense in all rings).
+                            \end{itemize}
+                    \end{enumerate}
+            \end{definition}
+            \begin{remark}
+                One should think of $\gamma_n(x)$ as a replacement for $\frac{x^n}{n!}$ which, unlike the latter, makes sense in all rings, regardless of characteristic and invertibility of $n$. This also explains the \say{divided power} terminology.
+            \end{remark}
+            \begin{proposition}[Uniqueness of PD-structures] \label{prop: uniqueness_of_PD_structures}
+                
+            \end{proposition}
+                \begin{proof}
+                        
+                \end{proof}
         
         \subsubsection{Categories of divided power algebras}
         
@@ -8,6 +36,7 @@
         
     \subsection{Crystalline sites}
         \subsubsection{PD-envelopes, PD-thickenings, and affine crystalline covers}
+            
         
         \subsubsection{Big crystalline sites}
         
