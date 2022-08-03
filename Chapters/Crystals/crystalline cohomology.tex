@@ -21,16 +21,55 @@
                     \end{enumerate}
             \end{definition}
             \begin{remark}
-                One should think of $\gamma_n(x)$ as a replacement for $\frac{x^n}{n!}$ which, unlike the latter, makes sense in all rings, regardless of characteristic and invertibility of $n$. This also explains the \say{divided power} terminology.
+                One should think of $\gamma_n(x)$ as a replacement for $\frac{x^n}{n!}$ which, unlike the latter, makes sense in all rings, regardless of characteristic and invertibility of $n$; proposition \ref{prop: uniqueness_of_PD_structures} helps us justify this way of thinking. This also explains the \say{divided power} terminology.
             \end{remark}
             \begin{proposition}[Uniqueness of PD-structures] \label{prop: uniqueness_of_PD_structures}
-                
+                Let $(A, I)$ be a pair consisting of a commutative ring $A$ and an $A$-ideal $I$.
+                    \begin{enumerate}
+                        \item If $\gamma := \{\gamma_n\}_{n \in \N}$ is a PD-structure on $I$, then for all $n \in \N$ and all $x \in I$, one has $n! \gamma_n(x) = x^n$.
+                        \item If $A$ is torsion-free as a $\Z$-module, then $\gamma$ will be uniquely defined: in fact, a family of functions $\gamma := \{\gamma_n: I \to I\}_{n \in \N}$ such that $n! \gamma_n(x) = x^n$ for all $n \in \N$ and all $x \in I$ is necessarily a PD-structure. 
+                        \item The $A$-ideal $I := (\{x_j\}_{j \in J})$ has a PD-structure $\gamma := \{\gamma_n: I \to I\}_{n \in \N}$ if and only if $x_j^n \in n! I$ for all generators $x_j$ and for all $n \geq 1$.
+                    \end{enumerate}
             \end{proposition}
                 \begin{proof}
-                        
+                    \noindent
+                    \begin{enumerate}
+                        \item If $\gamma := \{\gamma_n: I \to I\}$ is a PD-structure on $I$ then by definition $\gamma_n(x) \gamma_m(x) = \frac{(n + m)!}{n! m!} \gamma_{n + m}(x)$ for all $n, m \in \N$ and all $x \in I$. From this, and from the condition that $\gamma_1(x) = x$ for all $x \in I$, one infers that $n \gamma_n(x) = \frac{n!}{(n - 1)! 1!} \gamma_{(n - 1) + 1}(x) = \gamma_{n - 1}(x) \gamma_1(x) = \gamma_{n - 1}(x) x$. Using a straightforward inductive process on $\gamma_{n - 1}(x), \gamma_{n - 2}(x), ..., \gamma_1(x)$, one then sees that indeed $n! \gamma_n(x) = x^n$ as claimed.
+                        \item One direction is evident from the previous part. For the converse statement, suppose first of all that there is a family of functions $\gamma := \{\gamma_n: I \to I\}_{n \in \N}$ such that $n! \gamma_n(x) = x^n$ for all $n \in \N$ and all $x \in I$. Of course, one then immediately gets $\gamma_0(x) = 1$ and $\gamma_1(x) = x$. Next, because $n! m! \gamma_n(x) \gamma_m(x) = x^{n + m} = (n + m)! \gamma_{n + m}(x)$ so indeed, $\gamma_n(x) \gamma_m(x) = \frac{(n + m)!}{n! m!} \gamma_{n + m}(x)$ (and (note that $\frac{(n + m)!}{n! m!} = \binom{n + m}{n} \in \Z$ and hence makes sense in all rings). After that, observe that since $n! \gamma_n(ax) = a^n x^n = a^n n! \gamma_n(x)$, one has $\gamma_n(ax) = a^n \gamma_n(x)$. Then next condition defining $\gamma$ as a PD-structure on $I$ holds because $n! \gamma_n(x + y) = (x + y)^n = n! \sum_{i = 0}^n \binom{n}{i} x^i y^{n - i} = n! \sum_{i = 0}^n \binom{n}{i} i! \gamma_i(x) (n - i)! \gamma_{n - i}(y) = \sum_{i = 0}^n \gamma_i(x) \gamma_{n - i}(y)$. Lastly, note that $n!\gamma_n(m!\gamma_m(x)) = m!^n n!\gamma_n(\gamma_m(x)) = m!^n \gamma_m(x)^n = x^{mn} = (mn)! \gamma_{mn}(x)$, which implies that $\gamma_n \circ \gamma_m = \frac{(nm)!}{n! m!^n} \gamma_{nm}$ (and note that $\frac{(nm)!}{n! m!^n} \in \Z$, as it is the number of ways to equally divide a group of $nm$ things into $n$ groups of $m$ things each, and hence makes sense in all rings). Thus, $\gamma := \{\gamma_n: I \to I\}_{n \in \N}$ is indeed a PD-structure on $I$.
+                        \item  
+                    \end{enumerate}
                 \end{proof}
-        
-        \subsubsection{Categories of divided power algebras}
+            \begin{example}[A canonical PD-structure on $\Z_{(p)}$-algebras]
+                Fix a prime $p$ along with a $\Z_{(p)}$-algebra $A$. Then, the $A$-ideal $pA$ has a canonical PD-structure $\gamma := \{\gamma_n: pA \to pA\}_{n \in \N}$, mamely that given by $\gamma_n(x) := \frac{p^n}{n!} a$ for all $x := p a \in A$ and all $n \in \N$.
+            \end{example}
+            \begin{proposition}[PD-structures and nilpotent elements] \label{prop: PD_structures_and_nilpotent_elements}
+                Let $(A, I, \gamma)$ be a PD-ring and assume that $p \in \Nil(A/I)$. Then $I$ is locally nilpotent as an $A$-ideal if and only if $p \in \Nil(A)$.
+            \end{proposition}
+                \begin{proof}
+                    
+                \end{proof}
+                
+            \begin{definition}[PD-homomorphisms] \label{def: PD_homomorphisms}
+                Let $(A, I, \gamma)$ and $(B, J, \delta)$ be two PD-rings. A ring homomorphisms $f: A \to B$ is a \textbf{PD-homomorphism} if and only if it is PD-equivariant, in the sense that $f(\gamma_n(x)) = \delta_n(f(x)$ for all $x \in I$ and for all $n \in \N$. 
+            \end{definition}
+            \begin{convention}
+                There is an evident category of PD-rings, wherein the objects are PD-rings and the morphisms are PD-homomorphisms between said rings, which shall henceforth be denoted by $\Z\-\Comm\Alg^{\pd}$.
+            \end{convention}
+            \begin{lemma}[PD-structures on intersection, products, and sums of ideals] \label{prop: PD_structures_on_intersections_products_and_sums_of_ideals}
+                
+            \end{lemma}
+                \begin{proof}
+                    
+                \end{proof}
+            \begin{proposition}[All (co)limits of PD-rings exist] \label{prop: all_(co)limits_of_PD_rings_exist}
+                The category $\Z\-\Comm\Alg^{\pd}$ is both cocomplete and complete.
+            \end{proposition}
+                \begin{proof}
+                    
+                \end{proof}
+            \begin{remark}
+                The evident forgetful functor $\pd\-\oblv: \Z\-\Comm\Alg^{\pd} \to \Z\-\Comm\Alg$ does not preserve all colimits\footnote{Compare this to proposition \ref{prop: (co)limits_of_delta_rings}, where it is shown that the forgetful functor from the category of $\delta$-rings (cf. definition \ref{def: delta_rings}) to that of rings actually preserves all (co)limits.}. 
+            \end{remark}
         
         \subsubsection{Local complete intersections}
         

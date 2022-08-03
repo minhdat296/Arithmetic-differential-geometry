@@ -82,7 +82,7 @@
                 From proposition \ref{prop: p_derivations_and_lifts_of_frobenii}, one then sees that to $p$-derivations $R \to R$ correspond bijectively to paths in the space $\End_{\F_p\-\Comm\Alg^{\simp^{\op}}}\left(R \tensor_{\Z}^{\L} \F_p\right)$ (here $\F_p\-\Comm\Alg^{\simp^{\op}}$ denotes the $(\infty, 1)$-category of simplicial commutative $\F_p$-algebras) between the points $\phi_{\F_p}$ and $\Frob_{R/p}$.
             \end{remark}
             
-            Let us now move on to examining the (co)limits of $\delta$-rings as well as universal convstructions involving them. In particular, we shall see that the category $\Z_{(p)}\-\Comm\Alg^{\delta}$ is actually both complete and cocomplete. In fact, that this category is complete and cocomplete is a result of the fact that the evident forgetful functor $\Z_{(p)}\-\oblv^{\delta}: \Z_{(p)}\-\Comm\Alg^{\delta} \to \Z_{(p)}\-\Comm\Alg$ even admits both a left-adjoint and right-adjoint, both of which hold arithmetic significance: colimits and limits can then be \say{reflected} back from $\Z_{(p)}\-\Comm\Alg$, which is both complete and cocomplete.
+            Let us now move on to examining the (co)limits of $\delta$-rings as well as universal convstructions involving them. In particular, we shall see that the category $\Z_{(p)}\-\Comm\Alg^{\delta}$ is actually both complete and cocomplete. In fact, that this category is complete and cocomplete is a result of the fact that the evident forgetful functor $\delta_p\-\oblv: \Z_{(p)}\-\Comm\Alg^{\delta} \to \Z_{(p)}\-\Comm\Alg$ even admits both a left-adjoint and right-adjoint, both of which hold arithmetic significance: colimits and limits can then be \say{reflected} back from $\Z_{(p)}\-\Comm\Alg$, which is both complete and cocomplete.
             \begin{remark}[An initial $\delta$-ring] \label{remark: initial_delta_ring}
                 One can rather easily show that the $\delta$-ring $(\Z_{(p)}, \del_p)$ is initial amongst $\Z_{(p)}$-algebras equipped with $p$-derivations (i.e. $\delta$-rings over $\Z_{(p)}$). As such, for any fixed prime $p$, there is a category $\Z_{(p)}\-\Comm\Alg^{\delta}$ of what we shall henceforth refer to as $\delta_p$-algebras, whose objects are $\delta$-rings over $\Z_{(p)}$ and and whose morphisms are $\delta_p$-homomorphisms ($\Z_{(p)}$-algebra homomorphisms which are $\delta$-equivariant in the sense of definition \ref{def: delta_rings}). The \say{absolute} category $\Z\-\Comm\Alg^{\delta}$ of all $\delta$-rings, on the other hand, lacks initial objects. 
             \end{remark}
@@ -93,13 +93,13 @@
                 For any fixed prime $p$, the category $\Z_{(p)}\-\Comm\Alg^{\delta}$ of $\delta_p$-algebras admits all colimit and limits, which are computed at the level of the underlying commutative $\Z_{(p)}$-algebras. 
             \end{proposition}
                 \begin{proof}
-                    Thanks to the Special Adjoint Functor Theorem (cf. \cite{nlab:adjoint_functor_theorem}), the fact that the forgetful functor $\Z_{(p)}\-\oblv^{\delta}: \Z_{(p)}\-\Comm\Alg^{\delta} \to \Z_{(p)}\-\Comm\Alg$ preserves all colimits and all limits that exist in $\Z_{(p)}\-\Comm\Alg^{\delta}$ implies that it admits both a left-adjoint and a right-adjoint. As the category $\Z_{(p)}\-\Comm\Alg$ is both cocomplete and complete, the (co)limits in $\Z_{(p)}\-\Comm\Alg^{\delta}$ first of all exist, and second of all can be computed as (co)limits of the underlying diagrams of commutative $\Z_{(p)}$-algebras; as for the $p$-derivations on these (co)limits, they are as constructed in remark \ref{remark: p_derivations_and_length_2_witt_vectors}.
+                    Thanks to the Special Adjoint Functor Theorem (cf. \cite{nlab:adjoint_functor_theorem}), the fact that the forgetful functor $\delta_p\-\oblv: \Z_{(p)}\-\Comm\Alg^{\delta} \to \Z_{(p)}\-\Comm\Alg$ preserves all colimits and all limits that exist in $\Z_{(p)}\-\Comm\Alg^{\delta}$ implies that it admits both a left-adjoint and a right-adjoint. As the category $\Z_{(p)}\-\Comm\Alg$ is both cocomplete and complete, the (co)limits in $\Z_{(p)}\-\Comm\Alg^{\delta}$ first of all exist, and second of all can be computed as (co)limits of the underlying diagrams of commutative $\Z_{(p)}$-algebras; as for the $p$-derivations on these (co)limits, they are as constructed in remark \ref{remark: p_derivations_and_length_2_witt_vectors}.
                 \end{proof}
             \begin{corollary}[Quotients and localisations of $\delta$-rings] \label{coro: quotients_and_localisations_of_delta_rings}
                 
             \end{corollary}    
             \begin{convention}[Free $\delta$-rings] \label{conv: free_delta_rings}
-                Due to the relative nature of $\delta_p$-algebras (cf. remark \ref{remark: initial_delta_ring}), let us hereonafter refer to the left-adjoint of the forgetful functor $\Z_{(p)}\-\oblv^{\delta}$ as the functor of \textbf{free $\delta_p$-algebras} and let us denote it by $\Z_{(p)}\{-\}^{\delta}$.
+                Due to the relative nature of $\delta_p$-algebras (cf. remark \ref{remark: initial_delta_ring}), let us hereonafter refer to the left-adjoint of the forgetful functor $\delta_p\-\oblv$ as the functor of \textbf{free $\delta_p$-algebras} and let us denote it by $\Z_{(p)}\{-\}^{\delta}$.
             \end{convention}
             \begin{proposition}[$\delta$-polynomials] \label{prop: delta_polynomials}
                 
@@ -108,7 +108,7 @@
                     
                 \end{proof}
             \begin{proposition}[Witt vector rings are cofree $\delta$-rings] \label{prop: witt_vector_rings_are_cofree_delta_rings}
-                The right-adjoint of the forgetful functor $\Z_{(p)}\-\oblv^{\delta}$ is the $p$-typical Witt vector functor $\Witt(-)$.
+                The right-adjoint of the forgetful functor $\delta_p\-\oblv$ is the $p$-typical Witt vector functor $\Witt(-)$.
             \end{proposition}
                 \begin{proof}
                     
@@ -189,5 +189,7 @@
         \subsubsection{Cohomology on prismatic sites}
         
     \subsection{\texorpdfstring{$q$}{}-de Rham cohomology}
+    
+    \subsection{A site-theoretic interpretation of \texorpdfstring{$\bfA_{\inf}$}{}-cohomology}
     
     \subsection{Prismatic F-crystals and crystalline Galois representations}

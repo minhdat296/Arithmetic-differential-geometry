@@ -1,1 +1,30 @@
 \chapter{Introduction}
+    \section{\texorpdfstring{$p$}{}-adic cohomology}
+    
+    \section{Non-abelian \texorpdfstring{$p$}{}-adic Hodge theory}
+        \subsection{The Hodge-Tate decomposition}
+            We begin with the following result, which was the starting point of the field of complex Hodge theory:
+            \begin{theorem}[The Hodge Decomposition] \label{theorem: intro_hodge_decomposition}
+                Let $X$ be a smooth and proper complex algebraic variety and let us write $X^{\an}$ for the complex manifold whose underlying set is $X(\bbC)$. For such a variety, there is a canonical decomposition of the complex singular cohomology of $X^{\an}$ as follows:
+                    $$H^p(X^{\an}, \bbC) \cong \bigoplus_{p + q = n} H^p(X, \Omega_{X/\bbC}^q)$$
+            \end{theorem}
+            \begin{corollary}[Hodge numbers as topological invariants]
+                Let $f: X \to Y$ be a morphism of smooth and proper complex algebraic varieties, such that there is a canonical isomorphism of $\bbC$-vector spaces:
+                    $$H^n(Y^{\an}, \bbC) \to H^n(X^{\an}, \bbC)$$
+                for some $n \geq 0$. Then for all pairs $(p, q) \in \N^2$ such that $p + q = n$, there exist isomorphisms:
+                    $$H^p(Y, \Omega_{X/\bbC}^q) \to H^p(X, \Omega_{X/\bbC}^q)$$
+            \end{corollary}
+            
+            Theorem \ref{theorem: intro_hodge_decomposition} admits a much richer algebraic analogue that is stated in terms of \'etale cohomology. In particular, the cohomology vector spaces are now also Galois representations in a very natural manner, and thus have arithmetic significance.
+            \begin{theorem}
+                Let $X$ be an algebraic variety over $\Q$ and let $X_{\bbC}$ denote its base-change to $\bbC$. 
+                    \begin{enumerate}
+                        \item The aboslute Galois group $\Gal(\bar{\Q}/\Q)$ has a canonical action on $H^i(X_{\bbC}^{\an}, \Z/m\Z)$ for all $m \in \Z$. 
+                        \item By letting $n$ vary over the powers of some fixed prime $\ell$ and then taking the limit, one obtains a a canonical $\Gal(\bar{\Q}/\Q)$-action on $H^i(X_{\bbC}^{\an}, \Z_{\ell})$, and hence a canonical $\Gal(\bar{\Q}_p/\Q_p)$-action (for some other prime $p$) on the $\Q_{\ell}$-vector space $H^i(X_{\bbC}^{\an}, \Q_{\ell})$.
+                    \end{enumerate}
+            \end{theorem} 
+            \begin{example}[$\ell$-adic Tate modules] 
+                Let $E$ be a complex elliptic curve and let $\ell, p$ be primes.
+            \end{example}
+        
+        \subsection{Integral \texorpdfstring{$p$}{}-adic Hodge theory}
